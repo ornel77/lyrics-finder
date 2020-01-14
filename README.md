@@ -95,3 +95,28 @@ For the component that want the state we neeed to wrap them in a **consumer** ta
  ```
 
  ___
+
+ 4. Spinner component
+
+ We need to do a conditional to set the spinner when the array of track is empty
+
+ ```javascript
+ <Consumer>
+    {value => {
+        const { track_list } = value
+        if (track_list === undefined || track_list.length ===0) {
+            return <Spinner/>
+        } else {
+            return <h1>Tracks loaded</h1>
+        }
+            
+    }}
+</Consumer>
+```
+
+5. Track Component
+
+Loop through the track_list to set all the data in Track and importing it in Tracks
+
+> ⚠️ When using Router it's best to use Link instead of the a tag
+___
