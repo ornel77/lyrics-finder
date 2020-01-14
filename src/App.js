@@ -4,19 +4,24 @@ import './App.css';
 import Navbar from './components/layouts/Navbar'
 import Index from './components/layouts/Index'
 
+import {Provider} from './context'
+
 class App extends Component {
   render() {
     return (
-      <Router>
-        <Fragment className="App">
-          <Navbar/>
-          <div className="container">
-            <Switch>
-              <Route exact path="/" component={Index}/>
-            </Switch>
-          </div>
-        </Fragment>
-      </Router>
+      <Provider>
+        <Router>
+          <Fragment>
+            <Navbar/>
+            <div className="container">
+              <Switch>
+                <Route exact path="/" component={Index}/>
+              </Switch>
+            </div>
+          </Fragment>
+        </Router>
+      </Provider>
+      
     
     );
   }

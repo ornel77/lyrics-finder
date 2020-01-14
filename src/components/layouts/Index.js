@@ -1,11 +1,11 @@
-import React from 'react'
-
+import React, { Fragment } from 'react'
+import Tracks from '../tracks/Tracks'
 
 const Index = () => {
     return (
-        <div>
-            
-        </div>
+        <Fragment>
+            <Tracks/>
+        </Fragment>
     )
 }
 
