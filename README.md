@@ -143,3 +143,22 @@ We need to install a package called **Moment** to format a date:
 ```javascript
     <Moment format="DD/MM/YYYY">{track.updated_time}</Moment>
 ```
+
+
+7. Search component
+
+We need to connect Search to the context by using **Consumer**
+
+When we type in the input we got nothing because we have to attach an onchange event on this
+
+> :arrow_right: if we have several input in our state, instead of making an onChange function for all of them we just put **[e.target.name]** in the this.setState. 
+That's why we put the same value to the state and the name in the input
+
+* To change the top 10 tracks by our search we need to use a reducer
+
+To have a reducer where we can call the dispatch from whenever : 
+```javascript
+    dispatch: action => this.setState(state => reducer(state,action))
+```
+
+* We want to run the dispatch when we submit the form, make the request, get a response and **dispatch** that back to the reducer
