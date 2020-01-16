@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import PropTypes from 'prop-types'
 
 const Track = props => {
     const { track } = props
@@ -21,10 +20,6 @@ const Track = props => {
             </div>
         </div>
     )
-}
-
-Track.propTypes = {
-
 }
 
 export default Track

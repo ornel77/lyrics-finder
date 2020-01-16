@@ -96,7 +96,7 @@ For the component that want the state we neeed to wrap them in a **consumer** ta
 
  ___
 
- 4. Spinner component
+ 5. Spinner component
 
  We need to do a conditional to set the spinner when the array of track is empty
 
@@ -114,9 +114,32 @@ For the component that want the state we neeed to wrap them in a **consumer** ta
 </Consumer>
 ```
 
-5. Track Component
+6. Track Component
 
 Loop through the track_list to set all the data in Track and importing it in Tracks
 
 > ⚠️ When using Router it's best to use Link instead of the a tag
 ___
+
+7. Lyrics component
+
+We have to make to request to have the lyrics
+
+As we don't need the lyrics in other component we don't fetch our data via context API
+
+```javascript
+${this.props.match.params.id}
+```
+To get the id from the URL.
+
+* Time formatting
+
+We need to install a package called **Moment** to format a date:
+
+```bash
+    npm i moment react-moment
+```
+
+```javascript
+    <Moment format="DD/MM/YYYY">{track.updated_time}</Moment>
+```
